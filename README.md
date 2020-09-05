@@ -8,6 +8,8 @@ Run php artisan key:generate \
 Run php artisan migrate --seed or php artisan db:seed (it has some seeded data for testing) \
 For the front end install npm by running npm install \
 
++ Front end Url http://test-book-api.herokuapp.com/ - (Not Https://)
+
 # Book API Endpoints
 ## The application is hosted on heroku, the endpoints are below
 * External Book endpoint http://127.0.0.1:8000/api/v1/external-books?name={nameOfBook} or <br>
