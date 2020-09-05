@@ -5,7 +5,7 @@ Clone the repository with git clone \
 Copy .env.example file to .env and edit database credentials there \
 Run composer install \
 Run php artisan key:generate \
-Run php artisan migrate --seed or php artisan db:seed (it has some seeded data for your testing) \
+Run php artisan migrate --seed or php artisan db:seed (it has some seeded data for testing) \
 For the front end install npm by running npm install \
 
 # Book API Endpoints
@@ -26,8 +26,8 @@ For the front end install npm by running npm install \
 * Search List of books http://127.0.0.1:8000/api/v1/search?query={query} -GET Method <br>
    + http://test-book-api.herokuapp.com/api/v1/search?query={query} - Get Method <br>
 
-## Testing The Application
-# Testing of the application is done with Laravel PHPunit
+# Testing The Application
+## Testing of the application is done with Laravel PHPunit
 * General testing of the application can be done by running this command: <br>
 + vendor\bin\phpunit tests\Feature\BookApiTest.php <br>
 Testing each of the features can be done by running the below command <br>
@@ -48,9 +48,6 @@ Testing each of the features can be done by running the below command <br>
 * Edit Book API <br>
     + vendor\bin\phpunit --filter test_edit_book <br>
 
-
-
-
-
-## License
+If Test is successful without an error as shown below
+![alt text](https://i.ibb.co/wW3XY7K/Screenshot-355.png)
 
