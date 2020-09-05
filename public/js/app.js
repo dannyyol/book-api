@@ -43385,12 +43385,12 @@ var render = function() {
           _vm._v(" "),
           _c(
             "tbody",
-            _vm._l(_vm.results["data"].slice(0, 20), function(result) {
+            _vm._l(_vm.results["data"].slice(0, 20), function(result, index) {
               return _c(
                 "tr",
-                { key: result.id },
+                { key: result.index },
                 [
-                  _c("td", [_vm._v(_vm._s(result.id))]),
+                  _c("td", [_vm._v(_vm._s(index))]),
                   _vm._v(" "),
                   _c("td", [_vm._v(" " + _vm._s(result.name) + " ")]),
                   _vm._v(" "),

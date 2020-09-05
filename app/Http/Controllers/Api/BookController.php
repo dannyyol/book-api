@@ -21,7 +21,7 @@ class BookController extends Controller
     public function index()
     {
         //
-        $books = Book::all();
+        $books = Book::latest()->get();
         return response()->json(['status_code'=>200, 'status'=>'success', 'data' => new BookCollection($books)], 200);
     }
 

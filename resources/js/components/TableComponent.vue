@@ -45,8 +45,8 @@
             <tbody>
 
 
-                    <tr  v-for="result in results['data'].slice(0,20)" :key="result.id">
-                        <td>{{ result.id }}</td>
+                    <tr  v-for="(result, index) in results['data'].slice(0,20)" :key="result.index">
+                        <td>{{ index }}</td>
                         <td> {{ result.name }} </td>
                         <td>{{ result.isbn }}</td>
                         <div v-for="(author,index) in result.authors" :key="author.index">
