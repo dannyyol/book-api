@@ -48,6 +48,7 @@ Testing each of the features can be done by running the below command <br>
 * Edit Book API <br>
     + vendor\bin\phpunit --filter test_edit_book <br>
 
-If Test is successful without an error as shown below
+If the test is ran successfully without an error, it will look below
+
 ![alt text](https://i.ibb.co/wW3XY7K/Screenshot-355.png)
 
