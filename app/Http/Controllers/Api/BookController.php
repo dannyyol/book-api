@@ -125,9 +125,17 @@ class BookController extends Controller
             'release_date' => 'required',
             'number_of_pages' => 'required',
 
-           ]);
-           $authors = $request->get('authors');
+        ]);
+        $get_authors = $request->get('authors');
 
+        if (count($get_authors) == count($get_authors, COUNT_RECURSIVE)){
+            $authors = $request->get('authors');
+        }
+        else{
+            foreach($get_authors as $author_name){
+                $authors[] = $author_name['name'];
+            }
+        }
 
         $book = Book::create([
             'name'=>$request->get('name'),

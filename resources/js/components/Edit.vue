@@ -30,14 +30,10 @@
                                 <label for="">Authors</label>
                                 <div v-for="(author, index) in form.authors" :key="index" style="padding-bottom:10px;">
                                     <div class="input-group control-group increment">
-                                        <input type="text" class="form-control" id="inputtext"  placeholder="Authors" v-model="author.name">
+                                        <input type="text" class="form-control" id="inputtext"  placeholder="Authors" v-model="form.authors[index]">
                                         <a class="btn btn-sm btn-danger" style="border-radius:0px;"  @click="deleteAuthor(index)"><i class="fa fa-remove"></i></a>
                                     </div>
                                 </div>
-
-
-
-
 
                                 <small class="text-danger" v-if="errors.authors"> {{ errors.authors[0] }} </small>
                                 <br>
@@ -107,23 +103,20 @@
 
     methods:{
       BookUpdate(){
-  	  let id = this.$route.params.id
-       axios.patch('/api/v1/books/'+id,this.form)
-       .then(() => {
-            swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Your work has been saved',
-                showConfirmButton: true,
-                timer: 1500
-            })
-        this.$router.push({ name: 'home'})
-       })
-       .catch(error =>this.errors = error.response.data.errors)
+        let id = this.$route.params.id
+        axios.patch('/api/v1/books/'+id,this.form)
+        .then(() => {
+                swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: true,
+                    timer: 1500
+                })
+            this.$router.push({ name: 'home'})
+        })
+        .catch(error =>this.errors = error.response.data.errors)
      },
-
-
-
 
     addAuthor: function () {
         this.deleteAuthor
@@ -131,20 +124,20 @@
     },
 
     deleteAuthor: function (index) {
-      console.log(index);
-      console.log(this.form.authors);
-      this.form.authors.splice(index, 1);
-    }
+        console.log(index);
+        console.log(this.form.authors);
+        this.form.authors.splice(index, 1);
+        }
     },
 //   ,
-  created(){
-      let id = this.$route.params.id
-      console.log(id)
-  	axios.get('/api/v1/books/'+id+'/edit')
-  	.then(({data}) => (this.form = data))
-  	.catch(console.log('error'))
+    created(){
+        let id = this.$route.params.id
+        console.log(id)
+        axios.get('/api/v1/books/'+id+'/edit')
+            .then(({data}) => (this.form = data))
+            .catch(console.log('error'))
 
-  },
+    },
 
 
   }

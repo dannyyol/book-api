@@ -2045,13 +2045,7 @@ __webpack_require__.r(__webpack_exports__);
       console.log(this.form.authors);
       this.form.authors.splice(index, 1);
     }
-  } //   mounted(){
-  //     axios.get('/api/category/')
-  //     .then(({data}) => (this.categories = data))
-  //     axios.get('/api/supplier/')
-  //     .then(({data}) => (this.suppliers = data))
-  //   }
-
+  }
 });
 
 /***/ }),
@@ -2164,10 +2158,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
 //
 //
 //
@@ -42092,11 +42082,7 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-6" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v(
-              "\n                            Header\n                        "
-            )
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c(
@@ -42442,7 +42428,18 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "card-header", staticStyle: { "text-align": "center" } },
+      [_c("b", [_vm._v(" Create A book")])]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -42659,8 +42656,8 @@ var render = function() {
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: author.name,
-                                    expression: "author.name"
+                                    value: _vm.form.authors[index],
+                                    expression: "form.authors[index]"
                                   }
                                 ],
                                 staticClass: "form-control",
@@ -42669,15 +42666,15 @@ var render = function() {
                                   id: "inputtext",
                                   placeholder: "Authors"
                                 },
-                                domProps: { value: author.name },
+                                domProps: { value: _vm.form.authors[index] },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      author,
-                                      "name",
+                                      _vm.form.authors,
+                                      index,
                                       $event.target.value
                                     )
                                   }
