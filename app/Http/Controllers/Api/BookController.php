@@ -123,7 +123,7 @@ class BookController extends Controller
             'country' => 'required',
             'publishers' => 'required',
             'release_date' => 'required',
-            'number_of_pages' => 'required',
+            'number_of_pages' => 'required|numeric',
 
         ]);
         $get_authors = $request->get('authors');

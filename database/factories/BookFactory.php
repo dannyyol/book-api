@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Book::class, function (Faker $faker) {
     $authors = serialize(array(($faker->name())));
     return [
-        'name' => $faker->name,
+        'name' => $faker->word(),
         'isbn' => $faker->unique()->isbn13,
         'authors' => $authors,
         'country' => $faker->country,
