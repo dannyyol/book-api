@@ -1,12 +1,16 @@
 ## Book API: Laravel 7.24 based Book API with the front end created with Vue.js
 
 ## How to install
-Clone the repository with git clone \
-Copy .env.example file to .env and edit database credentials there \
-Run composer install \
-Run php artisan key:generate \
-Run php artisan migrate --seed or php artisan db:seed (it has some seeded data for testing) \
-For the front end install npm by running npm install \
+* Clone the repository with git clone \
+* Copy .env.example file to .env and edit database credentials there (Rename .env.example to .env) \
+* Configure the new .env file like this \
+    + DB_DATABASE=books_api
+    + DB_USERNAME=root
+    + DB_PASSWORD= 
+* Run "composer install" \
+* Run "php artisan key:generate" \
+* Run "php artisan migrate --seed" or "php artisan db:seed" (it has some seeded data for testing) \
+* For the front end install npm by running npm install, after that run "npm run dev" or "npm run wacth" to compile the components to Javascript \
 
 + Front end Url http://test-book-api.herokuapp.com/ - (Not Https://)
 
