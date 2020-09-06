@@ -31,24 +31,24 @@ For the front end install npm by running npm install \
 # Testing The Application
 ## Testing of the application is done with Laravel PHPunit
 * General testing of the application can be done by running this command: <br>
-+ vendor\bin\phpunit tests\Feature\BookApiTest.php <br>
-Testing each of the features can be done by running the below command <br>
-* External book API <br>
-    + vendor\bin\phpunit --filter test_external_book <br>
-* Read API <br>
-    + vendor\bin\phpunit --filter test_index_book <br>
-* Create API <br>
-   + vendor\bin\phpunit --filter test_create_book <br>
-* Update API <br>
-    + vendor\bin\phpunit --filter test_update_book <br>
-* Show Book API <br>
-    + vendor\bin\phpunit --filter test_show_book <br>
-* 404 error for book not found <br>
-    + vendor\bin\phpunit --filter test_404_if_book_not_found <br>
-* Delete Book API <br>
-    + vendor\bin\phpunit --filter test_delete_book <br>
-* Edit Book API <br>
-    + vendor\bin\phpunit --filter test_edit_book <br>
+    + vendor\bin\phpunit tests\Feature\BookApiTest.php <br>
+* Testing each of the features can be done by running the below command <br>
+    + * External book API <br>
+        + vendor\bin\phpunit --filter test_external_book <br>
+    + * Read API <br>
+        + vendor\bin\phpunit --filter test_index_book <br>
+    + * Create API <br>
+        + vendor\bin\phpunit --filter test_create_book <br>
+    + * Update API <br>
+        + vendor\bin\phpunit --filter test_update_book <br>
+    + * Show Book API <br>
+        + vendor\bin\phpunit --filter test_show_book <br>
+    + * 404 error for book not found <br>
+        + vendor\bin\phpunit --filter test_404_if_book_not_found <br>
+    + * Delete Book API <br>
+        + vendor\bin\phpunit --filter test_delete_book <br>
+    + * Edit Book API <br>
+        + vendor\bin\phpunit --filter test_edit_book <br>
 
 If the test is ran successfully without an error, it will look below
 
