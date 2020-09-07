@@ -39,6 +39,7 @@
 * Testing each of the features can be done by running the below command <br>
     + * External book API <br>
         + vendor\bin\phpunit --filter test_external_book <br>
+        + Please connect to the internet since is external API for the this test not to fail
     + * Read API <br>
         + vendor\bin\phpunit --filter test_index_book <br>
     + * Create API <br>
